@@ -17,7 +17,9 @@ app.set('views', './views');
 // 4. Using Express layouts
 app.use(expressLayouts);
 
-
+// extract style and scripts from sub pages into the layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 
 // Setting the Routes
 app.use('/', require('./routes/routes'));
