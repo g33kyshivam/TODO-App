@@ -5,9 +5,7 @@ const port = 8000;
 
 
 // Setting the Routes
-app.get('/', (req,res) =>{
-    res.end('This Sever Is working');
-})
+app.use('/', require('./routes/routes'));
 
 // Start the server
 app.listen(8000,(err) =>{
