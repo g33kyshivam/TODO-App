@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    font-size: 16px;
+}
+
+#site-main{
+    padding: 50px;
+}
+
+#site-footer{
+    text-align: center;
+    padding-top: 30px;
+    background-color: #222;
+    color: white;
+}
