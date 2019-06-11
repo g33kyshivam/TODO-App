@@ -1,3 +1,60 @@
-<div class="jumbotron text-center">
-        <h1>Home Page</h1>
+<link rel="stylesheet" href="/css/home.css">
+
+<div class="todo-form">
+        <form action="/task/create" method="POST">
+                <div class="form-description">
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" placeholder="What do you need to do?" required>
+
+                </div>
+                
+                <div class="sub-form">
+                        <div class="category">
+                                <label for="category">Category</label>
+                                <select name="category" id="category" required>
+                                        <option value="Personal">Personal</option>
+                                        <option value="Work">Work</option>
+                                        <option value="School">School</option>
+                                        <option value="Other">Other</option>
+                                </select>
+
+                        </div>
+                        <div class="date">
+                                <label for="date">Due Date</label>
+                                <input type="date" id="start" name="calendar">
+                        </div>
+                </div>
+                
+
+                <button type="submit" class="btn btn-md center btn-danger">Add Task</button>
+        </form>
+
+        <!-- Show Task here with the Delete Functionlaity  -->
+        <ol class="task-list">
+                <% for (var task of todo_list) {%>
+                        <li class="task-list-item">
+                                <h3><%= task.description%></h3>
+                                <div class="sub-task-list-item">
+                                                <p>
+                                                                <%=task.date %>
+                                                </p>
+                                                <div class="task-list-button">
+                                                        <div class="btn btn-sm btn-primary <%= task.category%>">
+                                                                        <%= task.category%>
+                                                        </div>
+                                                                
+                                                        <a href="/task/delete/?id=<%= task._id%>" >
+                                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                                        </a>
+                                                </div>        
+
+                                </div>
+                                
+
+                                
+                        </li>
+                <%}%>
+        </ol>
+        
+
 </div>

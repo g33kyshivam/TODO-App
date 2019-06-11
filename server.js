@@ -6,6 +6,8 @@ const port = 8000;
 // Grabbing Exteranl Dependency Too
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
 
 //Confiure the application 
 // 1. Where to look for assets folder 

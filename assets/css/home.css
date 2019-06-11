@@ -1,0 +1,46 @@
+
+.form-description{
+    display: flex;
+    flex-direction: column;
+
+}
+.sub-form{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+button[type= submit]{
+    margin: 18px auto;
+    display: flex;
+}
+
+.sub-task-list-item{
+    display: flex;
+    justify-content: space-between;
+}
+.Personal{
+    background-color: purple;
+    border-color: purple;
+}   
+.Work{
+    background-color: grey;
+    border-color: grey;
+}
+.School{
+    background-color: green;
+    border-color: green;
+}
+.Other{
+    background-color: blue;
+    border-color:blue;
+}

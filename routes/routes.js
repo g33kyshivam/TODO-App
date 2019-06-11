@@ -11,3 +11,4 @@ const homeController = require('../controller/mainContoller');
 // Defining the Routes
 
 router.get('/', homeController.showHome);
+router.use('/task', require('./task'));
